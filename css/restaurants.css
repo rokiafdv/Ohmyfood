@@ -1,1 +1,22 @@
+html {
+    scroll-behavior: smooth;
+}
 
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    margin: 2% 0%;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Shrikhand', cursive;
+    font-size: 2.5em;
+}
