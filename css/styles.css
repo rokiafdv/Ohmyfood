@@ -247,3 +247,12 @@ footer a {
 
 }
 
+/* TABLETTE */
+@media (max-width: 992px) {
+}
+
+
+/* DEXSTOP */
+@media (min-width: 992px) {
+
+}
