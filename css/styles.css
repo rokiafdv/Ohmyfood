@@ -249,10 +249,21 @@ footer a {
 
 /* TABLETTE */
 @media (max-width: 992px) {
+    .fonctionnement{
+        display: flex;
+        justify-content: space-between;
+        width: 120%;
+
+    }
+    .fonctionnement a{
+        margin-top: 7%;
+        margin-left: -15%;
+        margin-right: 15%;
+    }
 }
 
 
 /* DEXSTOP */
-@media (min-width: 992px) {
+@media (min-width: 993px) {
 
 }
