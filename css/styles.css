@@ -116,7 +116,7 @@ main .fonctionnement-carte{
     margin: auto;
     text-decoration: none;
     color: black;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
 }
 
 main .fonctionnement-carte .fonctionnement-numero{
@@ -162,14 +162,14 @@ main .fonctionnement-carte .fonctionnement-details i{
     padding: 0% 5%;
     background-color: #f6f6f6;
 }
- .restaurantTitle{
-  padding-top: 7%;
-  margin-left: 7%;
- }
 
-.restaurant-cards{
-    width: 95%;
+ .restaurantTitle{
+  padding-top: 3%;
 }
+
+/* .restaurant-cards{
+    width: 95%;
+} */
 
 .restaurant-card{
     display: flex;
@@ -180,7 +180,7 @@ main .fonctionnement-carte .fonctionnement-details i{
     background-color: white;
     border-radius: 20px;
     margin-bottom: 3%;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     box-shadow: 1px 3px 7px gray;
 }
 
@@ -188,8 +188,9 @@ main .fonctionnement-carte .fonctionnement-details i{
     width: 100%;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
-    height: 250px;
+    height: 150px;
 }
+
 .tag{
     background-color: #a9e0d1;
     color: #3b8468;
@@ -199,26 +200,36 @@ main .fonctionnement-carte .fonctionnement-details i{
     right: 5rem;
     margin-top: 15px;
 }
+
 .restaurant-card-details{
-    height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
 }
+
+.restaurant-card-details-tilte{
+    width: 60%;
+}
+
 .restaurant-card-details h3{
     font-size: 1.5rem;
-    margin-left: 3%;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.25em;
 }
 
 .restaurant-card-details p{
-    font-size: 20px;
-    margin-left: 3%;
-    margin-top: -20px;
-    font-weight: 200;
+    font-size: 1em;
+    margin-block-start: 0.25em;
+    margin-block-end: 0.5em;
 }
 
-.restaurant-card-heart{
-
+.far.fa-heart{
+    font-size: 1.5em;
 }
 
-.restaurant-card-heart:hover{
+.far.fa-heart:hover{
     color: #9356DC;
 }
 
@@ -233,12 +244,12 @@ footer{
 .footer-title{
     font-family: 'Shrikhand', cursive;
     margin-left: 5%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 footer ul li {
     list-style-type: none;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 
 footer a {
@@ -248,22 +259,59 @@ footer a {
 }
 
 /* TABLETTE */
-@media (max-width: 992px) {
-    .fonctionnement{
-        display: flex;
-        justify-content: space-between;
-        width: 120%;
+@media (min-width: 768px) and (max-width: 992px) {
 
+    .restaurant-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-    .fonctionnement a{
-        margin-top: 7%;
-        margin-left: -15%;
-        margin-right: 15%;
+
+    .restaurant-card {
+        width: 48%;
     }
+
+    .restaurant-card-img img{
+        height: 200px;
+    }
+
+    .fonctionnement-cartes{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .fonctionnement-carte{
+        width: 45%;
+    }
+    
+
 }
 
 
 /* DEXSTOP */
 @media (min-width: 993px) {
+
+    .restaurant-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .restaurant-card {
+        width: 48%;
+    }
+
+    .restaurant-card-img img{
+        height: 250px;
+    }
+
+    .fonctionnement-cartes{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .fonctionnement-carte{
+        width: 30%;
+    }
 
 }
