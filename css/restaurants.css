@@ -11,7 +11,21 @@ body{
 header{
     display: flex;
     justify-content: center;
-    margin: 2% 0%;
+    margin: 2%;
+    align-items: center;
+}
+
+header .retour-en-arriere{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
 
 header a{
@@ -19,4 +33,149 @@ header a{
     color: black;
     font-family: 'Shrikhand', cursive;
     font-size: 2.5em;
+}
+
+/* Main */
+
+/* Banniere */
+
+.banniere{
+    width: 100%;
+}
+
+.banniere img{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+/* Pages */
+.pages{
+    width: 95%;
+    border-radius: 4rem 4rem 0 0;
+    background: whitesmoke;
+    padding: 2rem;
+    position: relative;
+    margin-top: -4rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: aUto auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.pagesTitle{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Shrikhand', cursive;
+    margin-bottom: 5%;
+}
+
+.restaurant-card-heart{
+    font-size: 30px;
+    
+}
+/* menus */
+
+.menus{
+    width: 45rem;
+    margin: 0;
+}
+.liste{
+    display: flex;
+    flex-direction: column;
+}
+.menu-titre{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    border-bottom: 4px solid #99e2d0;
+    width: 60px;
+}
+.menu-details{
+    background: white;
+    height: 7rem;
+    border-radius: 25px;
+    display: flex;
+    margin-bottom: 2%;
+
+}
+.menu-info{
+    padding: 1rem;
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.menu-titre-plats{
+    margin-top: -1%;
+    font-size: 25px;
+}
+.menu-com{
+    font-weight: 200;
+    font-size: 20px;
+    margin-top: -3%;
+}
+.menu-prix{
+    margin-top: 8%;
+    font-size: larger;
+}
+.zone-commander{
+    display: flex;
+    justify-content: center;
+    background: whitesmoke;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.button-commander{
+    background: linear-gradient(#FF79DA ,#9356DC);
+    border: none;
+    border-radius: 35px;
+    font-size: 1.5em;
+    color: white;
+    padding: 3%;
+    cursor: pointer;
+    box-shadow: 3px 1px 5px 1px grey;
+    text-decoration: none;
+    width: 30%;
+    text-align: center;
+}
+
+/* Footer */
+footer{
+    background-color:#000000c2;
+    width: 95%;
+    padding: 2% 0% 2% 5%;
+}
+.footer-title{
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.5rem;
+}
+
+footer ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
+
+footer ul li {
+    list-style-type: none;
+    padding-top: 1%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+
+}
+/* TABLETTE */
+@media (min-width: 768px) and (max-width: 992px){
+    
+}
+
+/* DEXSTOP */
+@media (min-width: 993px) {
+
 }
