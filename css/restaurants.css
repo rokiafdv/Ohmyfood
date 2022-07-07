@@ -1,11 +1,11 @@
 html {
     scroll-behavior: smooth;
+    
 }
 
 body{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif; 
 }
 
 header{
@@ -48,84 +48,140 @@ header a{
     max-height: 500px;
     object-fit: cover;
 }
-/* Pages */
-.pages{
-    width: 95%;
-    border-radius: 4rem 4rem 0 0;
-    background: whitesmoke;
-    padding: 2rem;
+
+.menu-restaurant{
+    background: #ebebeb;
+    border-radius: 70px 70px 0 0;
+    width: 90%;
+    padding: 5%;
+    margin-top: -75px;
     position: relative;
-    margin-top: -4rem;
-    margin-bottom: 4rem;
-    display: grid;
-    grid-template-columns: aUto auto;
+}
+
+.menu-restaurant-title{
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.pagesTitle{
-    margin: 0;
-    box-sizing: border-box;
+
+.menu-restaurant-title h1{ 
+    text-decoration: none;
+    color: black;
     font-family: 'Shrikhand', cursive;
-    margin-bottom: 5%;
+    font-size: 2em;
 }
 
-.restaurant-card-heart{
-    font-size: 30px;
-    
+.menu-restaurant-title .far.fa-heart{
+    font-size: 2em;
 }
-/* menus */
 
-.menus{
-    width: 45rem;
-    margin: 0;
+.menus-categories{
+    margin-top: 5%;
 }
-.liste{
-    display: flex;
-    flex-direction: column;
-}
-.menu-titre{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    border-bottom: 4px solid #99e2d0;
-    width: 60px;
-}
-.menu-details{
-    background: white;
-    height: 7rem;
-    border-radius: 25px;
-    display: flex;
-    margin-bottom: 2%;
 
+.menus-categories > p {
+    font-weight: normal;
+    font-size: 1em;
+    border-bottom: 3px solid #99e2d0;
+    width: 35px;
 }
-.menu-info{
-    padding: 1rem;
-    max-width: 100%;
-    flex: 1;
+
+.menus-conteneur a{
+    text-decoration: none;
+    color: black;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
+    background: white;
+    border-radius: 25px;
+    padding: 0 0 0 3%;
+    margin-bottom: 3%;
+    height: 75px;
+    animation: fadein 1s;
     
 }
-.menu-titre-plats{
-    margin-top: -1%;
-    font-size: 25px;
+@keyframes fadein {
+    0% {
+    opacity:0;
+    }
+    50%{
+    opacity:0.5; 
+    }
+    100% {
+    opacity:1;
+    }
 }
-.menu-com{
-    font-weight: 200;
-    font-size: 20px;
-    margin-top: -3%;
+
+    .menus-conteneur a .menu-title-description{
+    width: 80%;
 }
-.menu-prix{
-    margin-top: 8%;
-    font-size: larger;
+
+.menus-conteneur a .menu-price{
+    width: 20%;
+    padding-right: 3%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menus-conteneur a .menu-ckeck{
+    display: none;
+    width: 0%;
+
+}
+
+.menus-conteneur a:hover .menu-title-description{
+    width: calc(100% - 20% - 70px);
+}
+
+.menus-conteneur a:hover .menu-price{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menus-conteneur a:hover .menu-ckeck{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 100%;
+    background-color: #99e2d0;
+    border-radius: 0 25px 25px 0;
+    
+    
+}
+
+.menus-conteneur a:hover .menu-ckeck .fa-solid.fa-circle-check{
+    color: white;
+    font-size: 1.5em; 
+    
+   
+}
+.fa-solid.fa-circle-check :hover{
+    transition-property: transform;
+    transform: rotate(360deg);
+    transition: 0.4s ease-in-out;
+}
+
+.menu-title-description h3{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-title-description p{
+    margin-block-start: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .zone-commander{
     display: flex;
     justify-content: center;
-    background: whitesmoke;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    background: #ebebeb;
+    padding-bottom: 15%;
 }
 .button-commander{
     background: linear-gradient(#FF79DA ,#9356DC);
@@ -172,10 +228,37 @@ footer a {
 }
 /* TABLETTE */
 @media (min-width: 768px) and (max-width: 992px){
-    
+    .menus{
+        display: flex;
+    }
+    .menu-price{
+        display: contents;
+    }
+    .menus-conteneur a{
+    width: 95%;
+    margin-block-end: 7%;
+    }
 }
 
-/* DEXSTOP */
-@media (min-width: 993px) {
 
+
+/* DEXSTOP */
+
+@media (min-width: 993px){
+
+    .menus{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 20%;
+        
+    }
+    .menu-price{
+        display: contents;
+    }
+    
+    .button-commander{
+        font-size: 1.3em;
+        width: 10%;
+        
+    }
 }
