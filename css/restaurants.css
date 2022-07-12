@@ -49,6 +49,15 @@ header a{
     object-fit: cover;
 }
 
+
+
+.menus{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .menu-restaurant{
     background: #ebebeb;
     border-radius: 70px 70px 0 0;
@@ -77,6 +86,7 @@ header a{
 
 .menus-categories{
     margin-top: 5%;
+    width: 100%;
 }
 
 .menus-categories > p {
@@ -95,9 +105,10 @@ header a{
     background: white;
     border-radius: 25px;
     padding: 0 0 0 3%;
-    margin-bottom: 3%;
+    margin-bottom: 15px;
     height: 75px;
     animation: fadein 1s;
+    overflow: hidden;
     
 }
 @keyframes fadein {
@@ -112,8 +123,10 @@ header a{
     }
 }
 
-    .menus-conteneur a .menu-title-description{
+.menus-conteneur a .menu-title-description{
     width: 80%;
+    transition-duration: 1s;
+    transform: translateX(0px);
 }
 
 .menus-conteneur a .menu-price{
@@ -121,12 +134,28 @@ header a{
     padding-right: 3%;
     display: flex;
     justify-content: flex-end;
+    transition-duration: 1s;
+    transform: translateX(0px);
 }
 
 .menus-conteneur a .menu-ckeck{
-    display: none;
-    width: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 100%;
+    background-color: #99e2d0;
+    border-radius: 0 25px 25px 0;
+    margin-right: -70px;
+    transition-duration: 1s;
+    transform: translateX(0px);
+}
 
+.menus-conteneur a .menu-ckeck .fa-solid.fa-circle-check{
+    color: white;
+    font-size: 1.5em; 
+    transition-duration: .5s;
+    transform: rotate(-180deg);
 }
 
 .menus-conteneur a:hover .menu-title-description{
@@ -137,27 +166,22 @@ header a{
     width: 20%;
     display: flex;
     justify-content: flex-end;
+    transform: translateX(-70px);
 }
 
 .menus-conteneur a:hover .menu-ckeck{
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     width: 70px;
     height: 100%;
     background-color: #99e2d0;
-    border-radius: 0 25px 25px 0;
-    
-    
+    border-radius: 0 25px 25px 0; */ 
+    transform: translateX(-70px);
 }
 
+
 .menus-conteneur a:hover .menu-ckeck .fa-solid.fa-circle-check{
-    color: white;
-    font-size: 1.5em; 
-    
-   
-}
-.fa-solid.fa-circle-check :hover{
     transition-property: transform;
     transform: rotate(360deg);
     transition: 0.4s ease-in-out;
@@ -177,24 +201,32 @@ header a{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .zone-commander{
     display: flex;
     justify-content: center;
     background: #ebebeb;
     padding-bottom: 15%;
 }
+
 .button-commander{
     background: linear-gradient(#FF79DA ,#9356DC);
     border: none;
-    border-radius: 35px;
+    border-radius: 50px;
     font-size: 1.5em;
     color: white;
-    padding: 3%;
+    padding: 25px;
     cursor: pointer;
     box-shadow: 3px 1px 5px 1px grey;
     text-decoration: none;
     width: 30%;
     text-align: center;
+}
+
+.button-commander:hover{
+    /* Revoir l'éclairssisement au survole. */
+    background: linear-gradient(#f782d6f3 ,#9b66dde7);
+    box-shadow: 4px 2px 5px 4px gray;
 }
 
 /* Footer */
@@ -228,15 +260,20 @@ footer a {
 }
 /* TABLETTE */
 @media (min-width: 768px) and (max-width: 992px){
-    .menus{
-        display: flex;
-    }
     .menu-price{
         display: contents;
     }
+
     .menus-conteneur a{
-    width: 95%;
-    margin-block-end: 7%;
+        width: 95%;
+    }
+
+    .menus-categories{
+        width: 45%;
+    }
+
+    .menus {
+        justify-content: space-around;
     }
 }
 
@@ -246,12 +283,6 @@ footer a {
 
 @media (min-width: 993px){
 
-    .menus{
-        display: flex;
-        justify-content: space-between;
-        margin-right: 20%;
-        
-    }
     .menu-price{
         display: contents;
     }
@@ -259,6 +290,11 @@ footer a {
     .button-commander{
         font-size: 1.3em;
         width: 10%;
-        
+    }
+
+
+
+    .menus-categories{
+        width: 30%;
     }
 }
